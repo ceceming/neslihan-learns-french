@@ -217,7 +217,7 @@ function splash() {
 const MODES = [
   { id: 'cards', emoji: '🃏', name: 'Kelime Kartları', sub: 'Öğren & tekrar et', color: 'c1' },
   { id: 'quiz', emoji: '✅', name: 'Kelime Testi', sub: 'Doğru anlamı seç', color: 'c2' },
-  { id: 'gram', emoji: '📐', name: 'Gramer', sub: '6 sınav konusu', color: 'c3' },
+  { id: 'gram', emoji: '📐', name: 'Gramer', sub: '7 konu', color: 'c3' },
   { id: 'oral', emoji: '🎤', name: 'Sözlü Sınav', sub: 'Tanıtma · monolog · diyalog', color: 'c4' },
   { id: 'listen', emoji: '🎧', name: 'Dinle & Yaz', sub: 'Yazım çalış', color: 'c3' },
   { id: 'speak', emoji: '🗣️', name: 'Dinle & Söyle', sub: 'Telaffuz çalış', color: 'c4' },
@@ -719,7 +719,7 @@ function gramAcc(topic) {
 function gram(id) {
   if (!id) {
     app.innerHTML = `${topbar('📐 Gramer')}
-      <p class="lead">Sınavda istenen 6 konu. Önce kısa açıklamayı oku, sonra alıştırma yap.</p>
+      <p class="lead">Sınav konuları + derste işlenenler. Önce kısa açıklamayı oku, sonra alıştırma yap.</p>
       <div class="list">
         <a class="row hot" href="#/gram/mix"><span class="r-emoji">🔀</span><span><b>Karışık tekrar</b><small>Tüm konulardan, en çok zorlandıkların önce</small></span></a>
         ${GRAMMAR.map(g => { const a = gramAcc(g.id); return `<a class="row" href="#/gram/${g.id}"><span class="r-emoji">${g.emoji}</span>

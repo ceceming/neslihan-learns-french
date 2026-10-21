@@ -472,3 +472,100 @@ const PLAN = [
   ['2026-11-02', 'Hafif tekrar · erken yat 😴', [['🎤 Kendini tanıtma', '#/oral/intro'], ['💬 2 diyalog', '#/oral'], ['🧠 Kısa kelime tekrarı', '#/cards/smart']]],
   ['2026-11-03', 'SINAV GÜNÜ 🍀 Bonne chance !', [['💡 Önce soruları oku, sonra dinle', ''], ['💡 Anlamazsan: “Pouvez-vous répéter ?”', ''], ['💡 Yazıda 5 dk kontrol: fiil sonları, être/avoir', '']]],
 ];
+
+// ---------- Ders kitabı s.158–159: Dolaylı anlatım, CV ve profesyonel ağlar ----------
+THEMES.find(t => t.id === 'travail').words.push(
+  ['le réseau professionnel', 'profesyonel ağ', 'Je suis sur un réseau professionnel.', 'Profesyonel bir ağdayım.', 'm'],
+  ['le profil', 'profil', 'La photo du profil doit être neutre.', 'Profil fotoğrafı nötr olmalı.', 'm'],
+  ["l'employeur", 'işveren', "J'écris un message à un employeur.", 'Bir işverene mesaj yazıyorum.', 'm'],
+  ['le recruteur', 'işe alım uzmanı', 'Le recruteur lit mon CV.', 'İşe alım uzmanı özgeçmişimi okuyor.', 'm', 'kadın: la recruteuse'],
+  ['utile', 'faydalı / işe yarar', 'Le CV est encore utile.', 'CV hâlâ faydalı.'],
+  ['se demander', 'merak etmek', 'Je me demande si le CV est utile.', 'CV’nin faydalı olup olmadığını merak ediyorum.'],
+  ['vouloir savoir', 'bilmek istemek', 'Je voudrais savoir ce que je dois écrire.', 'Ne yazmam gerektiğini bilmek istiyorum.'],
+  ['expliquer', 'açıklamak', "Elle explique qu'elle a beaucoup d'expérience.", 'Çok deneyimi olduğunu açıklıyor.'],
+  ['ajouter', 'eklemek', "Acceptez-vous de m'ajouter à vos contacts ?", 'Beni kişilerinize eklemeyi kabul eder misiniz?'],
+  ['Bien à vous', 'Saygılarımla (resmî kapanış)', 'Merci pour votre réponse. Bien à vous.', 'Cevabınız için teşekkürler. Saygılarımla.', '', 'eş anlamlı: Bien cordialement'],
+);
+
+SENTENCES.push(
+  ["Elle dit qu'elle aimerait être dans ce réseau.", 'Bu ağda olmak istediğini söylüyor.'],
+  ["Il affirme que ce poste l'intéresse.", 'Bu pozisyonun ilgisini çektiğini söylüyor.'],
+  ['Je me demande si le CV est encore utile.', 'CV’nin hâlâ faydalı olup olmadığını merak ediyorum.'],
+  ['Je voudrais savoir ce que je dois écrire sur mon profil.', 'Profilime ne yazmam gerektiğini öğrenmek istiyorum.'],
+  ["Acceptez-vous de m'ajouter à vos contacts ?", 'Beni kişilerinize eklemeyi kabul eder misiniz?'],
+  ['Merci pour votre réponse.', 'Cevabınız için teşekkürler.'],
+);
+
+GRAMMAR.push({ id: 'indirect', emoji: '💬', name: 'Dolaylı anlatım', sub: 'Şimdiki zamanda aktarma (s.159)',
+  when: 'Birinin söylediğini ya da sorduğunu aktarmak: "… olduğunu söylüyor", "… olup olmadığını soruyor". Zamirleri değiştirmeyi unutma!',
+  forms: [
+    ['dire, répondre, affirmer, ajouter, annoncer, déclarer, expliquer, répéter + que', 'Bir cümleyi aktarmak: fiil + que'],
+    ["« C'est plus facile pour nous. » → Ils disent que c'est plus facile pour eux.", 'nous → eux: zamir değişti'],
+    ['demander, vouloir savoir, aimer savoir + où, qui, quand, comment, pourquoi', 'Bir soruyu aktarmak: fiil + soru kelimesi'],
+    ["« Pourquoi ce poste vous intéresse ? » → Elle me demande pourquoi ce poste m'intéresse.", 'vous → m’: zamir değişti'],
+    ['« Le CV est utile ? » → Elle se demande si le CV est utile.', 'Est-ce que / soru kelimesi yok → SI'],
+    ["« Qu'est-ce que vous pouvez apporter ? » → On vous demande ce que vous pouvez apporter.", "Qu'est-ce que → CE QUE"],
+    ["« Qu'est-ce qui est important ? » → Ils se demandent ce qui est important.", "Qu'est-ce qui → CE QUI"],
+  ],
+  examples: [["Il affirme que ce poste l'intéresse.", 'Bu pozisyonun ilgisini çektiğini söylüyor.'], ['Je me demande comment écrire le premier message.', 'İlk mesajı nasıl yazacağımı merak ediyorum.']],
+  qs: [
+    ["« J'aimerais être dans ce réseau professionnel. » → Elle dit ___ aimerait être dans ce réseau professionnel.", ["qu'elle", 'si elle', "ce qu'elle"], '(Alıştırma 2a) Bu profesyonel ağda olmak istediğini söylüyor.'],
+    ["« Ce poste m'intéresse. » → Il affirme que ce poste ___.", ["l'intéresse", "m'intéresse", 'vous intéresse'], '(Alıştırma 2b) Bu pozisyonun ilgisini çektiğini söylüyor.'],
+    ["« Nous avons beaucoup d'expérience dans la formation. » → Ils expliquent qu'ils ___ beaucoup d'expérience dans la formation.", ['ont', 'avons', 'avez'], '(Alıştırma 2c) Eğitim alanında çok deneyimleri olduğunu açıklıyorlar.'],
+    ['« Je vais créer un profil sur LinkedIn. » → Elle annonce qu’elle ___ créer un profil sur LinkedIn.', ['va', 'vais', 'allons'], '(Alıştırma 2d) LinkedIn’de profil oluşturacağını duyuruyor.'],
+    ['Nous nous demandons ___ les réseaux sociaux sont nécessaires.', ['si', 'ce que', 'que'], '(Alıştırma 3a) Sosyal medyanın gerekli olup olmadığını merak ediyoruz.'],
+    ['Les recruteurs affirment ___ le CV est encore utile.', ['que', 'si', 'ce qui'], '(Alıştırma 3b) İşe alım uzmanları CV’nin hâlâ faydalı olduğunu söylüyor.'],
+    ['Il demande au candidat ___ est sa formation.', ['quelle', 'ce que', 'si'], '(Alıştırma 3c) Adaya eğitiminin ne olduğunu soruyor.'],
+    ["J'explique ___ m'intéresse dans ce poste.", ['ce qui', 'ce que', 'qu’est-ce qui'], '(Alıştırma 3d) Bu pozisyonda beni neyin ilgilendirdiğini açıklıyorum.'],
+    ['« Est-ce que le CV est utile ? » → Elle se demande ___ le CV est utile.', ['si', 'que', 'ce que'], 'CV’nin faydalı olup olmadığını merak ediyor.'],
+    ["« Qu'est-ce que vous pouvez apporter ? » → On vous demande ___ vous pouvez apporter.", ['ce que', 'qu’est-ce que', 'ce qui'], 'Size ne katabileceğiniz soruluyor.'],
+    ["« Qu'est-ce qui est important dans un CV ? » → Ils se demandent ___ est important dans un CV.", ['ce qui', 'ce que', 'qu’est-ce qui'], 'CV’de neyin önemli olduğunu merak ediyorlar.'],
+    ['« Où est-ce que tu as étudié ? » → Jana veut savoir ___ tu as étudié.', ['où', 'si', 'que'], '(Alıştırma 5) Jana nerede okuduğunu bilmek istiyor.'],
+    ["« J'ai étudié à Bratislava. » → Rita dit qu'elle ___ étudié à Bratislava.", ['a', 'ai', 'as'], '(Alıştırma 6) Rita, Bratislava’da okuduğunu söylüyor.'],
+    ["« Vous avez de l'expérience ? » → Le recruteur demande ___ j'ai de l'expérience.", ['si', 'que', 'ce que'], 'İşe alım uzmanı deneyimim olup olmadığını soruyor.'],
+  ] });
+
+READING.push({ id: 'forum', emoji: '💼', title: 'Forum: Profesyonel profil (s.158)', text: "FORUM — Réseaux professionnels\n\nLina : Bonjour, je voudrais savoir ce que je dois écrire sur mon profil professionnel. Merci d'avance.\n\nPaul (recruteur) : Votre profil doit avoir un titre (votre métier ou vos métiers) et montrer vos expériences et vos compétences. Si vous mettez une photo, elle doit être neutre.\n\nLina : Merci pour votre réponse. Je me demande aussi comment écrire le premier message pour contacter un employeur. Vous avez des exemples ?\n\nPaul : Vous pouvez écrire : « Bonjour Madame, j'ai regardé les offres d'emploi de votre entreprise et je suis très intéressée par le poste de secrétaire. Acceptez-vous de m'ajouter à vos contacts ? Bien à vous, Lina »",
+  qs: [
+    ["Qu'est-ce qu'il faut mettre sur un profil professionnel ?", 'Profesyonel profile ne konmalı?', ['Un titre, les expériences et les compétences', "Son âge et sa famille", 'Seulement une photo']],
+    ['Comment doit être la photo ?', 'Fotoğraf nasıl olmalı?', ['Neutre', 'De vacances', 'Avec la famille']],
+    ['Quelle phrase sert à faire une demande polie ?', 'Hangi cümle kibar bir istek?', ["Acceptez-vous de m'ajouter à vos contacts ?", 'Bien à vous', "J'ai regardé les offres d'emploi"]],
+    ['Quelle expression termine un message formel ?', 'Hangi ifade resmî bir mesajı bitirir?', ['Bien à vous', 'Bisous', 'À plus !']],
+  ] });
+
+WRITING.push({
+  id: 'reseau', emoji: '🤝', title: 'Resmî mesaj: bağlantı isteği (s.158)',
+  tr: 'Profesyonel bir ağda (LinkedIn gibi) bir şirketin işe alım sorumlusuna mesaj yaz: kibarca selamla, hangi pozisyonla ilgilendiğini söyle, kibar bir istekte bulun (seni kişilerine eklemesi, CV’ni göndermek), resmî şekilde bitir.',
+  fr: "Sur un réseau professionnel, vous écrivez à un(e) recruteur(se). Vous saluez, vous dites quel poste vous intéresse, vous faites une demande polie et vous terminez le message de manière formelle. (60 à 80 mots)",
+  checks: [
+    ['Resmî selamla (Bonjour Madame, / Monsieur,)', /(madame|monsieur)/i],
+    ['Pozisyonu söyle (le poste de…)', /(poste|offre|annonce)/i],
+    ['Kibar istek (Acceptez-vous de… ? / Pouvez-vous… ?)', /(acceptez-vous|pouvez-vous|pourriez-vous|je voudrais)/i],
+    ['Soru sor', /\?/],
+    ['Teşekkür et (Merci d’avance)', /merci/i],
+    ['Resmî kapanış (Bien à vous, / Bien cordialement,)', /(bien à vous|cordialement)/i],
+  ],
+  phrases: [
+    ['Bonjour Madame,', 'Merhaba Hanımefendi,'],
+    ['Bonjour Monsieur,', 'Merhaba Beyefendi,'],
+    ["J'ai regardé les offres d'emploi de votre entreprise", 'Şirketinizin iş ilanlarına baktım'],
+    ['et je suis très intéressée par le poste de…', 've … pozisyonuyla çok ilgileniyorum'],
+    ['Je voudrais vous envoyer mon CV.', 'Size CV’mi göndermek istiyorum.'],
+    ["Acceptez-vous de m'ajouter à vos contacts ?", 'Beni kişilerinize eklemeyi kabul eder misiniz?'],
+    ['Pouvez-vous me dire… ?', 'Bana … söyleyebilir misiniz?'],
+    ["Merci d'avance.", 'Şimdiden teşekkürler.'],
+    ['Bien à vous,', 'Saygılarımla,'],
+    ['Bien cordialement,', 'Saygılarımla,'],
+  ],
+  model: "Bonjour Madame,\nJ'ai regardé les offres d'emploi de votre entreprise et je suis très intéressée par le poste de secrétaire. J'ai dix ans d'expérience et j'aime beaucoup le travail en équipe. Je voudrais vous envoyer mon CV. Acceptez-vous de m'ajouter à vos contacts ? Pouvez-vous aussi me dire quels sont les horaires de travail ? Merci d'avance pour votre réponse.\nBien à vous,\nNeslihan",
+});
+
+MONOLOGUES.push(
+  ['cv', "Selon vous, est-ce utile de faire un CV aujourd'hui ? Pourquoi ?", 'Size göre bugün CV hazırlamak faydalı mı? Neden?', "Oui, je pense que le CV est encore utile. C'est un document simple et pratique : le recruteur voit vite notre formation, nos expériences et nos compétences. Mais aujourd'hui, les réseaux professionnels sont aussi importants. À mon avis, il faut avoir un CV d'une page et un profil en ligne. Moi, j'ai préparé mon CV en français pour pratiquer !"],
+  ['reseaux', "Que pensez-vous des réseaux sociaux pour chercher un emploi ?", 'İş aramak için sosyal ağlar hakkında ne düşünüyorsunuz?', "Je pense que c'est une bonne méthode. Sur un réseau professionnel, on peut voir les offres d'emploi et contacter directement les employeurs. C'est rapide et gratuit. Mais il faut faire attention : le profil doit être sérieux et la photo doit être neutre. Je préfère quand même rencontrer les gens en personne."],
+);
+
+// Programa yeni dersi ekle
+PLAN.find(p => p[0] === '2026-10-22')[2].unshift(['📐 Yeni ders: Dolaylı anlatım (s.159)', '#/gram/indirect']);
+PLAN.find(p => p[0] === '2026-10-28')[2].push(['✍️ Resmî mesaj: bağlantı isteği (s.158)', '#/write/reseau']);
+PLAN.find(p => p[0] === '2026-11-01')[2].push(['💬 Dolaylı anlatım tekrarı', '#/gram/indirect']);

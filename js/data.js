@@ -569,3 +569,20 @@ MONOLOGUES.push(
 PLAN.find(p => p[0] === '2026-10-22')[2].unshift(['📐 Yeni ders: Dolaylı anlatım (s.159)', '#/gram/indirect']);
 PLAN.find(p => p[0] === '2026-10-28')[2].push(['✍️ Resmî mesaj: bağlantı isteği (s.158)', '#/write/reseau']);
 PLAN.find(p => p[0] === '2026-11-01')[2].push(['💬 Dolaylı anlatım tekrarı', '#/gram/indirect']);
+
+// ---------- Ders kitabı s.155: Lenna Jouot'nun dergi kapağı şeklindeki CV'si ----------
+THEMES.find(t => t.id === 'travail').words.push(
+  ["l'alternance", 'iş-okul (alternanslı) eğitim', "Je cherche une formation en alternance.", 'Alternanslı bir eğitim arıyorum.', 'f', 'Ayda 1–2 hafta okul, kalan zaman şirkette çalışma'],
+  ['le parcours', 'kariyer yolu / geçmiş', 'Parlez-moi de votre parcours.', 'Bana kariyer geçmişinizden bahsedin.', 'm'],
+  ['la réalisation', 'başarı / gerçekleştirilen iş', 'Voici mes réalisations professionnelles.', 'İşte mesleki başarılarım.', 'f'],
+  ['la motivation', 'motivasyon / istek', 'Quelle est votre motivation pour ce poste ?', 'Bu pozisyon için motivasyonunuz nedir?', 'f'],
+);
+
+READING.push({ id: 'lenna', emoji: '📰', title: 'CV: Lenna Jouot (s.155)', text: "LENNA — magazine\n\nRECHERCHE : Alternance en contrat de professionnalisation\n\nMASTER — Rentrée 2020 : Management et marketing du sport, INSEEC MSC/MBA, Bordeaux\nALTERNANCE (M1) : Chez vous 3 semaines par mois, à partir de septembre 2020\n\nTRANSFERT À SAISIR — Lenna Jouot : l'étoile qui manque à votre maillot !\n\nFORMATION (Bac+4)\n• Sept. 2020 : Master 1 Management et Marketing du Sport — INSEEC MSC MBA, Bordeaux\n• 2017–2020 : Bachelor Communication et Création Digitale — Sup de Pub, Bordeaux\n• 2015 : Baccalauréat littéraire — Lycée Guez de Balzac, Angoulême\n\nPORTRAIT : Parcours, compétences, motivation, réalisations : tout ce que vous devez savoir à son sujet.\n\nAu fait ! La formation en alternance permet d'apprendre un métier en travaillant. L'étudiant(e) étudie une ou deux semaines par mois et travaille le reste du temps dans une entreprise.",
+  qs: [
+    ['Qu’est-ce que Lenna cherche ?', 'Lenna ne arıyor?', ['Une alternance', 'Un appartement', 'Un club de sport']],
+    ['Qu’est-ce qu’elle étudie à partir de 2020 ?', '2020’den itibaren ne okuyor?', ['Le management et le marketing du sport', 'La communication et la création digitale', 'La littérature']],
+    ['Combien de temps par mois sera-t-elle dans l’entreprise ?', 'Ayda ne kadar süre şirkette olacak?', ['3 semaines', '1 semaine', '2 jours']],
+    ['Où a-t-elle passé son baccalauréat ?', 'Liseyi (bakaloryayı) nerede bitirdi?', ['À Angoulême', 'À Bordeaux', 'À Paris']],
+    ['L’alternance, c’est…', 'Alternans nedir?', ['étudier et travailler dans une entreprise', 'travailler à distance', 'faire un stage pendant les vacances']],
+  ] });
